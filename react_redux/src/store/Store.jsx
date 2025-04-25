@@ -9,12 +9,12 @@ export function reducer(state=a,action){
    
     if(action.type==="Increment"){
          return {
-            counter:state.counter+2
+            counter:state.counter+5
          }
     }
     if(action.type==="Decrement"){
         return {
-            counter:state.counter-2
+            counter:state.counter-5
         }
     }
   return state

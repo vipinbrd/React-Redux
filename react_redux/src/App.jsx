@@ -31,8 +31,8 @@ function App() {
     <>
     
      <p>{store}</p>
-     <button onClick={()=>updateHandler("D")}>INCREMENT BY 2</button>
-     <button onClick={()=>{updateHandler("I")}}>DECREMENT By 2</button>
+     <button onClick={()=>updateHandler("D")}>INCREMENT BY 5</button>
+     <button onClick={()=>{updateHandler("I")}}>DECREMENT By 5</button>
     </>
   )
 }
