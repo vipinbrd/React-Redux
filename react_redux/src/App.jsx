@@ -30,7 +30,9 @@ function App() {
   return (
     <>
     
-     <p>{657575}</p>
+     <p>{store}</p>
+     <button onClick={()=>updateHandler("D")}>INCREMENT BY 2</button>
+     <button onClick={()=>{updateHandler("I")}}>DECREMENT By 2</button>
     </>
   )
 }
