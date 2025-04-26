@@ -1,26 +1,29 @@
+import { configureStore, createSlice } from "@reduxjs/toolkit";
 import {createStore}from "redux"
 
-const a={
-
-    counter:0
-}
-
-export function reducer(state=a,action){
-   
-    if(action.type==="Increment"){
-         return {
-            counter:state.counter+5
-         }
+const AuthSlice=createSlice({
+ name:"auth",
+ initialState:false,
+ reducers:{
+    loggin(state){
+        return true;
+    },
+    logout(state){
+        return false;
     }
-    if(action.type==="Decrement"){
-        return {
-            counter:state.counter-5
-        }
-    }
-  return state
+ }
 
-}
-export const store=createStore(reducer);
+})
+
+export const store=configureStore({
+    reducer:{
+        auth:AuthSlice.reducer
+    }
+})
+
+export  const action=AuthSlice.actions;
+
+// export const store=createStore(reducer);
 
 
 
